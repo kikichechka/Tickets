@@ -39,3 +39,4 @@ hiltCompiler = {group = "com.google.dagger", name ="hilt-android-compiler", vers
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 dagger = {id = "com.google.dagger.hilt.android", version.ref = "dagger"}
+androidLibrary = { id = "com.android.library", version.ref = "agp" }
