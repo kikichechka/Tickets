@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingBottom="15dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/width_card_view_item_ticket"
+        android:layout_height="@dimen/height_card_view_item_ticket"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/margin_top_card_view_item_ticket"
+        app:cardCornerRadius="@dimen/corner_radius_card_view_item_ticket"
+        app:layout_constraintStart_toStartOf="parent"
+        android:backgroundTint="@color/grey_0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/price_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/some_id_7"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/margin_top_price_value_item_ticket"
+                android:layout_marginStart="@dimen/margin_start_price_value_item_ticket"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/some_id_7"
+                android:text="@string/ruble_sign"
+                app:layout_constraintTop_toTopOf="@id/price_value"
+                app:layout_constraintStart_toEndOf="@id/price_value"
+                android:layout_marginStart="@dimen/margin_start_ruble_item_ticket"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/container_time"
+                android:layout_width="@dimen/width_start_container_time_item_ticket"
+                android:layout_height="@dimen/height_start_container_time_item_ticket"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/margin_start_container_time_item_ticket"
+                android:layout_marginTop="@dimen/margin_top_container_time_item_ticket">
+
+                <ImageView
+                    android:id="@+id/icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/red_circle"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:contentDescription="@string/icon_circle" />
+
+                <TextView
+                    android:id="@+id/departure_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@id/icon"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/dash"
+                    android:textAppearance="@style/some_id_5"/>
+
+                <ImageView
+                    android:id="@+id/dash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/dash"
+                    app:layout_constraintStart_toEndOf="@id/departure_date"
+                    app:layout_constraintTop_toTopOf="@id/departure_date"
+                    app:layout_constraintBottom_toBottomOf="@id/departure_date"
+                    app:layout_constraintEnd_toStartOf="@id/arrival_date"
+                    android:contentDescription="@string/icon_dash" />
+
+                <TextView
+                    android:id="@+id/arrival_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@id/dash"
+                    app:layout_constraintTop_toTopOf="@id/departure_date"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:textAppearance="@style/some_id_5"/>
+
+
+                <TextView
+                    android:id="@+id/departure_airport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/departure_date"
+                    app:layout_constraintStart_toStartOf="@id/departure_date"
+                    app:layout_constraintEnd_toEndOf="@id/departure_date"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:textAppearance="@style/edit_text_where_1"/>
+
+                <TextView
+                    android:id="@+id/arrival_airport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/arrival_date"
+                    app:layout_constraintStart_toStartOf="@id/arrival_date"
+                    app:layout_constraintEnd_toEndOf="@id/arrival_date"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:textAppearance="@style/edit_text_where_1"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/time_difference"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/margin_start_time_difference_item_ticket"
+                android:textAppearance="@style/some_id_2"
+                app:layout_constraintStart_toEndOf="@+id/container_time"
+                app:layout_constraintTop_toTopOf="@id/container_time"/>
+
+            <TextView
+                android:id="@+id/on_the_way"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/some_id_2"
+                android:text="@string/on_the_way"
+                android:layout_marginHorizontal="3dp"
+                app:layout_constraintStart_toEndOf="@+id/time_difference"
+                app:layout_constraintTop_toTopOf="@id/time_difference"/>
+
+            <TextView
+                android:id="@+id/without_transfers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/some_id_2"
+                android:text="@string/without_transfers"
+                app:layout_constraintStart_toEndOf="@+id/on_the_way"
+                app:layout_constraintTop_toTopOf="@id/on_the_way"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+    
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/badge"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/height_badge_item_ticket"
+        android:minWidth="@dimen/min_width_badge_item_ticket"
+        android:padding="@dimen/padding_badge_item_ticket"
+        android:minHeight="@dimen/min_height_badge_item_ticket"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:cornerRadius="@dimen/corner_radius_badge_item_ticket"
+        android:visibility="gone"
+        android:backgroundTint="@color/dark_blue"
+        style="@style/some_id_5"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

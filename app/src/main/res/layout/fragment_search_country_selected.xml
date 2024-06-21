@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.searchcountryselectedfragment.SearchCountrySelectedFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_departure_points"
+        android:layout_width="@dimen/width_card_departure_points_search_country_selected"
+        android:layout_height="@dimen/height_card_departure_points_search_country_selected"
+        android:layout_marginTop="@dimen/margin_top_card_departure_points_search_country_selected"
+        android:backgroundTint="@color/grey_3"
+        app:cardCornerRadius="@dimen/corner_radius_card_departure_points_search_country_selected"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/padding_container_card_departure_points_search_country_selected">
+
+
+            <ImageView
+                android:id="@+id/icon_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/icon_back"
+                android:src="@drawable/back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/edit_where_from"
+                style="@style/edit_text_where_from"
+                android:layout_width="@dimen/width_edit_where_from_card_departure_points_search_country_selected"
+                android:layout_height="wrap_content"
+                android:text="@string/moscow"
+                app:layout_constraintBottom_toTopOf="@id/divider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/icon_back"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/icon_swap_places"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/icon_swap_places"
+                android:src="@drawable/swap_places"
+                app:layout_constraintBottom_toBottomOf="@id/edit_where_from"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/edit_where_from" />
+
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/divider"
+                android:layout_width="@dimen/divider_width_card_departure_points_search_country_selected"
+                android:layout_height="wrap_content"
+                app:dividerColor="@color/grey_4"
+                app:layout_constraintBottom_toBottomOf="@id/icon_back"
+                app:layout_constraintEnd_toEndOf="@id/icon_clear"
+                app:layout_constraintStart_toStartOf="@id/edit_where_from"
+                app:layout_constraintTop_toTopOf="@id/icon_back" />
+
+
+            <TextView
+                android:id="@+id/edit_where"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/where_turkey"
+                android:textAppearance="@style/edit_text_where_from"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/edit_where_from"
+                app:layout_constraintTop_toBottomOf="@id/divider" />
+
+
+            <ImageView
+                android:id="@+id/icon_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/icon_clear"
+                android:src="@drawable/clear"
+                app:layout_constraintBottom_toBottomOf="@id/edit_where"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/icon_swap_places"
+                app:layout_constraintTop_toTopOf="@id/edit_where" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <HorizontalScrollView
+        android:layout_width="@dimen/width_scroll_view_search_country_selected"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_top_scroll_view_search_country_selected"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="@id/card_departure_points"
+        app:layout_constraintStart_toStartOf="@id/card_departure_points"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_back_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_end_material_button_search_country_selected"
+                android:backgroundTint="@color/grey_3"
+                android:minWidth="@dimen/min_width_button_search_country_selected"
+                android:minHeight="@dimen/min_height_button_search_country_selected"
+                android:paddingHorizontal="@dimen/padding_horizontal_button_search_country_selected"
+                android:text="@string/back"
+                android:textAppearance="@style/some_id_9"
+                app:icon="@drawable/plus"
+                app:iconSize="16dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_departure_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_end_material_button_search_country_selected"
+                android:backgroundTint="@color/grey_3"
+                android:fontFamily="@font/sf_pro_display_light_italic"
+                android:minWidth="@dimen/min_width_button_search_country_selected"
+                android:minHeight="@dimen/min_height_button_search_country_selected"
+                android:paddingHorizontal="@dimen/padding_horizontal_button_search_country_selected"
+                android:textAppearance="@style/some_id_2" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_end_material_button_search_country_selected"
+                android:backgroundTint="@color/grey_3"
+                android:fontFamily="@font/sf_pro_display_light_italic"
+                android:minWidth="@dimen/min_width_button_search_country_selected"
+                android:minHeight="@dimen/min_height_button_search_country_selected"
+                android:paddingHorizontal="@dimen/padding_horizontal_button_search_country_selected"
+                android:text="@string/one_count_passenger"
+                android:textAppearance="@style/some_id_2"
+                app:icon="@drawable/person"
+                app:iconSize="@dimen/icon_size_one_count_passenger" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_end_material_button_search_country_selected"
+                android:backgroundTint="@color/grey_3"
+                android:fontFamily="@font/sf_pro_display_light_italic"
+                android:minWidth="@dimen/min_width_button_search_country_selected"
+                android:minHeight="@dimen/min_height_button_search_country_selected"
+                android:paddingHorizontal="@dimen/padding_horizontal_button_search_country_selected"
+                android:text="@string/filters"
+                android:textAppearance="@style/some_id_2"
+                app:icon="@drawable/filters"
+                app:iconSize="@dimen/icon_size_filters" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/width_card_view_recycler_for_all_straight_rails"
+        android:layout_height="@dimen/height_card_view_recycler_for_all_straight_rails"
+        android:layout_marginTop="@dimen/margin_top_card_view_recycler_for_all_straight_rails"
+        android:backgroundTint="@color/grey_0"
+        app:cardCornerRadius="@dimen/corner_radius_card_view_recycler_for_all_straight_rails"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_linear_layout_card_view_recycler_for_all_straight_rails">
+
+            <TextView
+                style="@style/some_id_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/straight_rails" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_for_all_straight_rails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+            <TextView
+                android:id="@+id/text_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/download_error" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_show_all_ticket"
+        style="@style/some_id_6"
+        android:layout_width="@dimen/width_button_show_all_ticket"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_top_button_show_all_ticket"
+        android:backgroundTint="@color/dark_blue"
+        android:text="@string/show_all_ticket"
+        app:cornerRadius="@dimen/corner_radius_button_show_all_ticket"
+        app:layout_constraintEnd_toEndOf="@id/card_departure_points"
+        app:layout_constraintStart_toStartOf="@id/card_departure_points"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

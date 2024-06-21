@@ -1,0 +1,94 @@
+<resources>
+    <string name="app_name">Search-ticket</string>
+    <string name="air_tickets">Авиабилеты</string>
+    <string name="hotels">Отели</string>
+    <string name="in_short">Короче</string>
+    <string name="subscriptions">Подписки</string>
+    <string name="profile">Профиль</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search_cheap_flights">Поиск дешевых авиабилетов</string>
+    <string name="moscow">Москва</string>
+    <string name="where_turkey">Куда-Турция</string>
+    <string name="fly_away_musically">Музыкально отлететь</string>
+    <string name="difficult_route">Сложный маршрут</string>
+    <string name="anywhere">Куда угодно</string>
+    <string name="weekends">Выходные</string>
+    <string name="hot_tickets">Горячие билеты</string>
+    <string name="istanbul">Стамбул</string>
+    <string name="popular_destination">Популярное направление</string>
+    <string name="back">обратно</string>
+    <string name="straight_rails">Прямые рельсы</string>
+    <string name="show_all_ticket">Посмотреть все билеты</string>
+    <string name="description_button_hide">Скрыть диалоговое окно</string>
+    <string name="go_back">Назад</string>
+    <string name="ruble_sign">₽</string>
+    <string name="from">от</string>
+    <string name="passenger">пассажир</string>
+    <string name="sochi">Сочи</string>
+    <string name="phuket">Пхукет</string>
+    <string name="download_error">Ошибка загрузки</string>
+    <string name="description_icon_search">icon search</string>
+    <string name="description_icon_air">icon air</string>
+    <string name="description_icon_clear">icon clear</string>
+    <string name="description_icon_difficult_route">description icon difficult route</string>
+    <string name="description_icon_anywhere">description icon anywhere</string>
+    <string name="description_icon_weekends">description icon weekends</string>
+    <string name="description_icon_hot_tickets">description icon hot tickets</string>
+    <string name="icon_back">icon back</string>
+    <string name="icon_swap_places">icon swap places</string>
+    <string name="icon_clear">icon clear</string>
+    <string name="one_count_passenger">1, эконом</string>
+    <string name="filters">фильтры</string>
+    <string name="button_back">button back</string>
+    <string name="comma">,</string>
+    <string name="filter">Фильтр</string>
+    <string name="price_chart">График цен</string>
+    <string name="image_popular_destination">image popular destination</string>
+    <string name="image_musically">image musically</string>
+    <string name="icon_circle">icon circle</string>
+    <string name="icon_arrow">icon arrow</string>
+    <string name="icon_dash">icon dash</string>
+    <string name="without_transfers">/ Без пересадок</string>
+    <string name="on_the_way">в пути</string>
+    <string name="icon_search">icon search</string>
+
+    <string-array name="abbreviated_month">
+        <item>янв</item>
+        <item>фев</item>
+        <item>мар</item>
+        <item>апр</item>
+        <item>мая</item>
+        <item>июня</item>
+        <item>июля</item>
+        <item>авг</item>
+        <item>сен</item>
+        <item>окт</item>
+        <item>ноя</item>
+        <item>дек</item>
+    </string-array>
+
+    <string-array name="month">
+        <item>января</item>
+        <item>февраля</item>
+        <item>марта</item>
+        <item>апреля</item>
+        <item>мая</item>
+        <item>июня</item>
+        <item>июля</item>
+        <item>августа</item>
+        <item>сентября</item>
+        <item>октября</item>
+        <item>ноября</item>
+        <item>декабря</item>
+    </string-array>
+
+    <string-array name="day">
+        <item>пн</item>
+        <item>вт</item>
+        <item>ср</item>
+        <item>чт</item>
+        <item>пт</item>
+        <item>сб</item>
+        <item>вс</item>
+    </string-array>
+</resources>

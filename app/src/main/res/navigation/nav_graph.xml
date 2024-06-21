@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/airTicketsFragment">
+
+    <fragment
+        android:id="@+id/airTicketsFragment"
+        android:name="com.example.tickets.presentation.airticketsfragment.AirTicketsFragment"
+        android:label="fragment_air_tickets"
+        tools:layout="@layout/fragment_air_tickets">
+
+        <action
+            android:id="@+id/action_airTicketsFragment_to_plugFragment"
+            app:destination="@id/plugFragment" />
+        <action
+            android:id="@+id/action_airTicketsFragment_to_searchCountrySelectedFragment"
+            app:destination="@id/searchCountrySelectedFragment">
+            <argument
+                android:name="CountryArg"
+                app:argType="com.example.tickets.presentation.models.Way"/>
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/hotelsFragment"
+        android:name="com.example.tickets.presentation.otherfragments.HotelsFragment"
+        android:label="fragment_hotels"
+        tools:layout="@layout/fragment_hotels" />
+
+    <fragment
+        android:id="@+id/inShortFragment"
+        android:name="com.example.tickets.presentation.otherfragments.InShortFragment"
+        android:label="fragment_in_short"
+        tools:layout="@layout/fragment_in_short" />
+
+    <fragment
+        android:id="@+id/subscriptionsFragment"
+        android:name="com.example.tickets.presentation.otherfragments.SubscriptionsFragment"
+        android:label="fragment_subscriptions"
+        tools:layout="@layout/fragment_subscriptions" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.tickets.presentation.otherfragments.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/searchCountrySelectedFragment"
+        android:name="com.example.tickets.presentation.searchcountryselectedfragment.SearchCountrySelectedFragment"
+        android:label="fragment_search_country_selected"
+        tools:layout="@layout/fragment_search_country_selected">
+        <action
+            android:id="@+id/action_searchCountrySelectedFragment_to_showAllTicketsFragment"
+            app:destination="@id/showAllTicketsFragment">
+            <argument
+                android:name="DataForSearch"
+                app:argType="com.example.tickets.presentation.models.DataForSearch"/>
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/showAllTicketsFragment"
+        android:name="com.example.tickets.presentation.showallticketsfragment.ShowAllTicketsFragment"
+        android:label="fragment_show_all_tickets"
+        tools:layout="@layout/fragment_show_all_tickets" />
+
+    <fragment
+        android:id="@+id/plugFragment"
+        android:name="com.example.tickets.presentation.otherfragments.PlugFragment"
+        android:label="fragment_plug"
+        tools:layout="@layout/fragment_plug">
+
+        <action
+            android:id="@+id/action_plugFragment_to_airTicketsFragment"
+            app:destination="@id/airTicketsFragment" />
+    </fragment>
+
+</navigation>

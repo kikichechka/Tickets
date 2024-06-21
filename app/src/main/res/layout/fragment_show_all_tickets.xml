@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentation.showallticketsfragment.ShowAllTicketsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container_for_way"
+        android:layout_width="@dimen/width_container_for_way_show_all_tickets"
+        android:layout_height="@dimen/height_container_for_way_show_all_tickets"
+        android:layout_marginTop="@dimen/margin_top_container_for_way_show_all_tickets"
+        android:background="@color/grey_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/button_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/button_back"
+            android:src="@drawable/back_blue_arrow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title_way"
+            style="@style/edit_text_where_from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_start_title_way_show_all_tickets"
+            app:layout_constraintBottom_toTopOf="@id/date"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/date"
+            style="@style/edit_text_where_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/title_way"
+            app:layout_constraintTop_toBottomOf="@id/title_way" />
+
+        <TextView
+            style="@style/edit_text_where_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/comma"
+            app:layout_constraintStart_toEndOf="@id/date"
+            app:layout_constraintTop_toTopOf="@id/date" />
+
+        <TextView
+            android:id="@+id/count_passenger"
+            style="@style/edit_text_where_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_start_count_passenger_show_all_tickets"
+            app:layout_constraintStart_toEndOf="@id/date"
+            app:layout_constraintTop_toTopOf="@id/date" />
+
+        <TextView
+            style="@style/edit_text_where_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_start_count_passenger_show_all_tickets"
+            android:text="@string/passenger"
+            app:layout_constraintStart_toEndOf="@id/count_passenger"
+            app:layout_constraintTop_toTopOf="@id/count_passenger" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/text_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/download_error"
+        app:layout_constraintBottom_toTopOf="@id/scroll_for_list_tickets" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/scroll_for_list_tickets"
+        android:layout_width="@dimen/width_scroll_for_list_tickets_show_all_tickets"
+        android:layout_height="@dimen/height_scroll_for_list_tickets_show_all_tickets"
+        android:layout_marginTop="@dimen/margin_top_scroll_for_list_tickets_show_all_tickets"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/container_for_way" />
+
+    <FrameLayout
+        android:id="@+id/point"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_filter"
+        style="@style/ButtonLeft"
+        android:layout_width="@dimen/width_button_filter_show_all_tickets"
+        android:layout_height="@dimen/height_button_filter_show_all_tickets"
+        android:padding="@dimen/padding_button_filter_show_all_tickets"
+        android:text="@string/filter"
+        app:icon="@drawable/filters"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/point" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_price"
+        style="@style/ButtonRight"
+        android:layout_width="@dimen/width_button_price_show_all_tickets"
+        android:layout_height="@dimen/height_button_price_show_all_tickets"
+        android:padding="@dimen/padding_button_price_show_all_tickets"
+        android:text="@string/price_chart"
+        app:icon="@drawable/chart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/point" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
