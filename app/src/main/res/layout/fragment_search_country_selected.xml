@@ -117,9 +117,11 @@
                 android:minWidth="@dimen/min_width_button_search_country_selected"
                 android:minHeight="@dimen/min_height_button_search_country_selected"
                 android:paddingHorizontal="@dimen/padding_horizontal_button_search_country_selected"
+                android:paddingVertical="@dimen/padding_vertical_button_search_country_selected"
                 android:text="@string/back"
-                android:textAppearance="@style/some_id_9"
+                style="@style/some_id_9"
                 app:icon="@drawable/plus"
+                app:iconTint="@color/white"
                 app:iconSize="16dp" />
 
             <com.google.android.material.button.MaterialButton
@@ -129,10 +131,11 @@
                 android:layout_marginEnd="@dimen/margin_end_material_button_search_country_selected"
                 android:backgroundTint="@color/grey_3"
                 android:fontFamily="@font/sf_pro_display_light_italic"
+                android:paddingVertical="@dimen/padding_vertical_button_search_country_selected"
                 android:minWidth="@dimen/min_width_button_search_country_selected"
                 android:minHeight="@dimen/min_height_button_search_country_selected"
                 android:paddingHorizontal="@dimen/padding_horizontal_button_search_country_selected"
-                android:textAppearance="@style/some_id_2" />
+                style="@style/some_id_2" />
 
 
             <com.google.android.material.button.MaterialButton
@@ -145,7 +148,9 @@
                 android:minHeight="@dimen/min_height_button_search_country_selected"
                 android:paddingHorizontal="@dimen/padding_horizontal_button_search_country_selected"
                 android:text="@string/one_count_passenger"
-                android:textAppearance="@style/some_id_2"
+                android:paddingVertical="@dimen/padding_vertical_button_search_country_selected"
+                style="@style/some_id_2"
+                app:iconTint="@color/white"
                 app:icon="@drawable/person"
                 app:iconSize="@dimen/icon_size_one_count_passenger" />
 
@@ -158,8 +163,10 @@
                 android:minWidth="@dimen/min_width_button_search_country_selected"
                 android:minHeight="@dimen/min_height_button_search_country_selected"
                 android:paddingHorizontal="@dimen/padding_horizontal_button_search_country_selected"
+                android:paddingVertical="@dimen/padding_vertical_button_search_country_selected"
                 android:text="@string/filters"
-                android:textAppearance="@style/some_id_2"
+                style="@style/some_id_2"
+                app:iconTint="@color/white"
                 app:icon="@drawable/filters"
                 app:iconSize="@dimen/icon_size_filters" />
         </LinearLayout>
@@ -167,7 +174,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="@dimen/width_card_view_recycler_for_all_straight_rails"
-        android:layout_height="@dimen/height_card_view_recycler_for_all_straight_rails"
+        android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_top_card_view_recycler_for_all_straight_rails"
         android:backgroundTint="@color/grey_0"
         app:cardCornerRadius="@dimen/corner_radius_card_view_recycler_for_all_straight_rails"

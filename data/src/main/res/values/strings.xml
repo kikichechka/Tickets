@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="istanbul">Стамбул</string>
+    <string name="popular_destination">Популярное направление</string>
+    <string name="sochi">Сочи</string>
+    <string name="phuket">Пхукет</string>
+    <string name="moscow">Москва</string>
+</resources>

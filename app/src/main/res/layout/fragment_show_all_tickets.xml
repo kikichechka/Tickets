@@ -108,6 +108,8 @@
         android:layout_height="@dimen/height_button_filter_show_all_tickets"
         android:padding="@dimen/padding_button_filter_show_all_tickets"
         android:text="@string/filter"
+        android:textColor="@color/white"
+        app:iconTint="@color/white"
         app:icon="@drawable/filters"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/point" />
@@ -119,6 +121,8 @@
         android:layout_height="@dimen/height_button_price_show_all_tickets"
         android:padding="@dimen/padding_button_price_show_all_tickets"
         android:text="@string/price_chart"
+        android:textColor="@color/white"
+        app:iconTint="@color/white"
         app:icon="@drawable/chart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/point" />

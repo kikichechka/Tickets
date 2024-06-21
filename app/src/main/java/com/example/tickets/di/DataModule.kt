@@ -3,9 +3,7 @@ package com.example.tickets.di
 import android.content.Context
 import com.example.tickets.data.PopularDestinationsLocalStorageImpl
 import com.example.tickets.data.SharedPreferencesCityStorageImpl
-import com.example.tickets.data.SharedPreferencesCityStorageImpl_Factory
 import com.example.tickets.data.TicketsRepositoryImpl
-import com.example.tickets.domain.GetAllTicketsUseCase
 import com.example.tickets.domain.repository.PopularDestinationsLocalStorage
 import com.example.tickets.domain.repository.SharedPreferencesCityStorage
 import com.example.tickets.domain.repository.TicketsRepository

@@ -1,4 +1,4 @@
-package com.example.tickets
+package com.example.tickets.data
 
 import org.junit.Test
 
