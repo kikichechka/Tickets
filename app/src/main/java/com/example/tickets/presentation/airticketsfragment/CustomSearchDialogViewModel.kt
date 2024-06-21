@@ -2,7 +2,7 @@ package com.example.tickets.presentation.airticketsfragment
 
 import androidx.lifecycle.ViewModel
 import com.example.tickets.domain.GetPopularDestinationUseCase
-import com.example.tickets.presentation.models.PopularDestination
+import com.example.tickets.domain.models.PopularDestination
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import javax.inject.Inject

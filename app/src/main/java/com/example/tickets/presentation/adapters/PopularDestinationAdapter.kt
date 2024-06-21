@@ -5,8 +5,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.bumptech.glide.Glide
-import com.example.tickets.presentation.models.PopularDestination
 import com.example.tickets.databinding.ItemForPopularDestinationBinding
+import com.example.tickets.domain.models.PopularDestination
 
 class PopularDestinationAdapter(
     private val list: List<PopularDestination>,

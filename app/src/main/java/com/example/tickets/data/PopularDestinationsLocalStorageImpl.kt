@@ -1,9 +1,9 @@
 package com.example.tickets.data
 
 import android.content.Context
-import com.example.tickets.domain.repository.PopularDestinationsLocalStorage
-import com.example.tickets.presentation.models.PopularDestination
 import com.example.tickets.R
+import com.example.tickets.domain.models.PopularDestination
+import com.example.tickets.domain.repository.PopularDestinationsLocalStorage
 import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
 
