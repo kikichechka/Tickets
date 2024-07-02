@@ -8,8 +8,6 @@ import retrofit2.Response
 interface TicketsRepository {
     suspend fun getOffers(): Response<Offers>
 
-    suspend fun getOffers1(): Response<Offers>
-
     suspend fun getRecommendTickets(): Response<TicketsOffers>
 
     suspend fun getAllTickets(): Response<Tickets>

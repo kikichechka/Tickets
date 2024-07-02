@@ -12,10 +12,6 @@ class TicketsRepositoryImpl @Inject constructor() : TicketsRepository {
         return MyRetrofit.searchData.getOffers()
     }
 
-    override suspend fun getOffers1(): Response<Offers> {
-        return MyRetrofit.searchData.getOffers()
-    }
-
     override suspend fun getRecommendTickets(): Response<TicketsOffers> {
         return MyRetrofit.searchData.getRecommendTickets()
     }

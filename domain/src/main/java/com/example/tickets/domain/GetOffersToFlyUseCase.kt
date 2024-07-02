@@ -10,7 +10,7 @@ class GetOffersToFlyUseCase @Inject constructor(
 ) {
 
     suspend fun getData(): List<OfferWithPicture>? {
-        val response = ticketsRepository.getOffers1()
+        val response = ticketsRepository.getOffers()
 
         if (response.code() in 200..299) {
             return response.body()
