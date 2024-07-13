@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,107 +10,101 @@
         android:id="@+id/some_id"
         android:layout_width="@dimen/width_some_id"
         android:layout_height="@dimen/height_some_id"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/margin_top_some_id"
-        android:gravity="center_horizontal|top"
+        android:gravity="center_horizontal"
         android:text="@string/search_cheap_flights"
-        android:textAppearance="@style/some_id"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textAppearance="@style/some_id" />
 
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_edit_text"
         android:layout_width="@dimen/width_card_view_edit_text"
         android:layout_height="@dimen/height_card_view_edit_text"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/margin_top_card_view_edit_text"
         android:backgroundTint="@color/grey_2"
         android:elevation="@dimen/elevation_card_view_edit_text"
-        app:cardCornerRadius="@dimen/corner_radius_card_view_edit_text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:cardCornerRadius="@dimen/corner_radius_card_view_edit_text">
 
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="@dimen/width_small_card_view_edit_text"
-        android:layout_height="@dimen/height_small_card_view_edit_text"
-        android:backgroundTint="@color/grey_4"
-        app:cardCornerRadius="@dimen/corner_radius_small_card_view_edit_text"
-        app:cardElevation="@dimen/card_elevation_small_card_view_edit_text"
-        app:layout_constraintBottom_toBottomOf="@id/card_edit_text"
-        app:layout_constraintEnd_toEndOf="@id/card_edit_text"
-        app:layout_constraintStart_toStartOf="@id/card_edit_text"
-        app:layout_constraintTop_toTopOf="@id/card_edit_text">
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/width_small_card_view_edit_text"
+            android:layout_height="@dimen/height_small_card_view_edit_text"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/grey_4"
+            app:cardCornerRadius="@dimen/corner_radius_small_card_view_edit_text"
+            app:cardElevation="@dimen/card_elevation_small_card_view_edit_text">
 
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="@dimen/padding_container_small_card_view_edit_text">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/padding_container_small_card_view_edit_text">
 
 
-            <ImageView
-                android:id="@+id/icon_search"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/black_search"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:contentDescription="@string/icon_search" />
+                <ImageView
+                    android:id="@+id/icon_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/icon_search"
+                    android:src="@drawable/black_search"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/layout_edit_where_from"
-                android:layout_width="232dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin_start_layout_edit_where_from"
-                app:boxStrokeWidth="@dimen/box_stroke_width_layout_edit_where_from"
-                app:boxStrokeWidthFocused="@dimen/box_stroke_width_focused_layout_edit_where_from"
-                app:layout_constraintBottom_toTopOf="@id/divider"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layout_edit_where_from"
+                    android:layout_width="232dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_start_layout_edit_where_from"
+                    app:boxStrokeWidth="@dimen/box_stroke_width_layout_edit_where_from"
+                    app:boxStrokeWidthFocused="@dimen/box_stroke_width_focused_layout_edit_where_from"
+                    app:layout_constraintBottom_toTopOf="@id/divider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/edit_where_from"
-                    style="@style/some_id_8"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:padding="@dimen/padding_edit_where_from"
-                    android:paddingStart="@dimen/padding_start_edit_where_from"
-                    android:text="@string/moscow"
-                    tools:ignore="RtlSymmetry" />
-
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.divider.MaterialDivider
-                android:id="@+id/divider"
-                android:layout_width="@dimen/width_material_divider_air_tickets"
-                android:layout_height="wrap_content"
-                app:dividerColor="@color/grey_5"
-                app:layout_constraintBottom_toTopOf="@id/edit_where"
-                app:layout_constraintStart_toStartOf="@id/layout_edit_where_from"
-                app:layout_constraintTop_toBottomOf="@id/layout_edit_where_from" />
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_where_from"
+                        style="@style/some_id_8"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/padding_edit_where_from"
+                        android:paddingStart="@dimen/padding_start_edit_where_from"
+                        android:text="@string/moscow"
+                        tools:ignore="RtlSymmetry" />
 
 
-            <TextView
-                android:id="@+id/edit_where"
-                android:layout_width="@dimen/width_edit_where_air_tickets"
-                android:layout_height="wrap_content"
-                app:boxStrokeWidth="@dimen/stroke_width_edit_where_air_tickets"
-                app:boxStrokeWidthFocused="@dimen/stroke_width_focused_edit_where_air_tickets"
-                android:text="@string/where_turkey"
-                style="@style/edit_text_where"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="@id/divider"
-                app:layout_constraintTop_toBottomOf="@id/divider">
+                </com.google.android.material.textfield.TextInputLayout>
 
-            </TextView>
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/divider"
+                    android:layout_width="@dimen/width_material_divider_air_tickets"
+                    android:layout_height="wrap_content"
+                    app:dividerColor="@color/grey_5"
+                    app:layout_constraintBottom_toTopOf="@id/edit_where"
+                    app:layout_constraintStart_toStartOf="@id/layout_edit_where_from"
+                    app:layout_constraintTop_toBottomOf="@id/layout_edit_where_from" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
 
+                <TextView
+                    android:id="@+id/edit_where"
+                    style="@style/edit_text_where"
+                    android:layout_width="@dimen/width_edit_where_air_tickets"
+                    android:layout_height="wrap_content"
+                    android:text="@string/where_turkey"
+                    app:boxStrokeWidth="@dimen/stroke_width_edit_where_air_tickets"
+                    app:boxStrokeWidthFocused="@dimen/stroke_width_focused_edit_where_air_tickets"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/divider"
+                    app:layout_constraintTop_toBottomOf="@id/divider">
+
+                </TextView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
     </androidx.cardview.widget.CardView>
 
     <TextView
@@ -119,27 +113,26 @@
         android:layout_height="@dimen/fly_away_musically_height"
         android:layout_marginTop="@dimen/margin_top_fly_away_musically"
         android:text="@string/fly_away_musically"
-        android:textAppearance="@style/some_id"
-        app:layout_constraintStart_toStartOf="@id/card_edit_text"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_gravity="center_horizontal"
+        android:textAppearance="@style/some_id"/>
 
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_musically"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="@dimen/margin_start_fly_away_recycler_musically"
         android:layout_marginTop="@dimen/margin_top_fly_away_recycler_musically"
         android:orientation="horizontal"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintStart_toStartOf="@id/card_edit_text"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_gravity="center_horizontal"/>
 
     <TextView
         android:id="@+id/text_error"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="@string/download_error"
-        app:layout_constraintTop_toBottomOf="@id/recycler_musically" />
+        android:layout_marginTop="@dimen/margin_top_fly_away_recycler_musically"
+        android:text="@string/download_error" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

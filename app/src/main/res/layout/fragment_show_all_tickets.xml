@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,11 +11,9 @@
         android:id="@+id/container_for_way"
         android:layout_width="@dimen/width_container_for_way_show_all_tickets"
         android:layout_height="@dimen/height_container_for_way_show_all_tickets"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/margin_top_container_for_way_show_all_tickets"
-        android:background="@color/grey_1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:background="@color/grey_1">
 
         <ImageView
             android:id="@+id/button_back"
@@ -79,52 +77,46 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="@string/download_error"
-        app:layout_constraintBottom_toTopOf="@id/scroll_for_list_tickets" />
+        android:layout_marginTop="@dimen/margin_top_scroll_for_list_tickets_show_all_tickets"
+        android:text="@string/download_error" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/scroll_for_list_tickets"
         android:layout_width="@dimen/width_scroll_for_list_tickets_show_all_tickets"
-        android:layout_height="@dimen/height_scroll_for_list_tickets_show_all_tickets"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/margin_top_scroll_for_list_tickets_show_all_tickets"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/container_for_way" />
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
-    <FrameLayout
-        android:id="@+id/point"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_gravity="bottom|center_horizontal"
+        android:orientation="horizontal">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_filter"
-        style="@style/ButtonLeft"
-        android:layout_width="@dimen/width_button_filter_show_all_tickets"
-        android:layout_height="@dimen/height_button_filter_show_all_tickets"
-        android:padding="@dimen/padding_button_filter_show_all_tickets"
-        android:text="@string/filter"
-        android:textColor="@color/white"
-        app:iconTint="@color/white"
-        app:icon="@drawable/filters"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@id/point" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_filter"
+            style="@style/ButtonLeft"
+            android:layout_width="@dimen/width_button_filter_show_all_tickets"
+            android:layout_height="@dimen/height_button_filter_show_all_tickets"
+            android:padding="@dimen/padding_button_filter_show_all_tickets"
+            android:text="@string/filter"
+            android:textColor="@color/white"
+            app:icon="@drawable/filters"
+            app:iconTint="@color/white" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_price"
-        style="@style/ButtonRight"
-        android:layout_width="@dimen/width_button_price_show_all_tickets"
-        android:layout_height="@dimen/height_button_price_show_all_tickets"
-        android:padding="@dimen/padding_button_price_show_all_tickets"
-        android:text="@string/price_chart"
-        android:textColor="@color/white"
-        app:iconTint="@color/white"
-        app:icon="@drawable/chart"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/point" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_price"
+            style="@style/ButtonRight"
+            android:layout_width="@dimen/width_button_price_show_all_tickets"
+            android:layout_height="@dimen/height_button_price_show_all_tickets"
+            android:padding="@dimen/padding_button_price_show_all_tickets"
+            android:text="@string/price_chart"
+            android:textColor="@color/white"
+            app:icon="@drawable/chart"
+            app:iconTint="@color/white" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+
+</FrameLayout>

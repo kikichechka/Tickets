@@ -4,7 +4,7 @@
     android:layout_width="296dp"
     android:layout_height="wrap_content">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginVertical="10dp">
@@ -14,18 +14,13 @@
             android:layout_width="@dimen/width_icon_circle_item_straight"
             android:layout_height="@dimen/height_icon_circle_item_straight"
             android:layout_marginTop="@dimen/margin_top_icon_circle_item_straight"
-            android:contentDescription="@string/icon_circle"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:contentDescription="@string/icon_circle" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="@dimen/width_container_information_item_straight"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_start_container_information_item_straight"
-            android:layout_marginTop="@dimen/margin_top_container_information_item_straight"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_marginTop="@dimen/margin_top_container_information_item_straight">
 
             <TextView
                 android:id="@+id/title"
@@ -70,7 +65,7 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
 
     <com.google.android.material.divider.MaterialDivider
         android:layout_width="match_parent"

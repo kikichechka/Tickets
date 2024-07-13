@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,19 +10,16 @@
         android:id="@+id/card_departure_points"
         android:layout_width="@dimen/width_card_departure_points_search_country_selected"
         android:layout_height="@dimen/height_card_departure_points_search_country_selected"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/margin_top_card_departure_points_search_country_selected"
         android:backgroundTint="@color/grey_3"
-        app:cardCornerRadius="@dimen/corner_radius_card_departure_points_search_country_selected"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:cardCornerRadius="@dimen/corner_radius_card_departure_points_search_country_selected">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="@dimen/padding_container_card_departure_points_search_country_selected">
-
 
             <ImageView
                 android:id="@+id/icon_back"
@@ -93,15 +90,12 @@
 
     </androidx.cardview.widget.CardView>
 
-
     <HorizontalScrollView
-        android:layout_width="@dimen/width_scroll_view_search_country_selected"
+        android:layout_width="@dimen/width_card_departure_points_search_country_selected"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/margin_top_scroll_view_search_country_selected"
-        android:scrollbars="none"
-        app:layout_constraintEnd_toEndOf="@id/card_departure_points"
-        app:layout_constraintStart_toStartOf="@id/card_departure_points"
-        app:layout_constraintTop_toTopOf="parent">
+        android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -110,6 +104,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_back_date"
+                style="@style/some_id_9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/margin_end_material_button_search_country_selected"
@@ -119,42 +114,42 @@
                 android:paddingHorizontal="@dimen/padding_horizontal_button_search_country_selected"
                 android:paddingVertical="@dimen/padding_vertical_button_search_country_selected"
                 android:text="@string/back"
-                style="@style/some_id_9"
                 app:icon="@drawable/plus"
-                app:iconTint="@color/white"
-                app:iconSize="16dp" />
+                app:iconSize="16dp"
+                app:iconTint="@color/white" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_departure_date"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/margin_end_material_button_search_country_selected"
-                android:backgroundTint="@color/grey_3"
-                android:fontFamily="@font/sf_pro_display_light_italic"
-                android:paddingVertical="@dimen/padding_vertical_button_search_country_selected"
-                android:minWidth="@dimen/min_width_button_search_country_selected"
-                android:minHeight="@dimen/min_height_button_search_country_selected"
-                android:paddingHorizontal="@dimen/padding_horizontal_button_search_country_selected"
-                style="@style/some_id_2" />
-
-
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/margin_end_material_button_search_country_selected"
-                android:backgroundTint="@color/grey_3"
-                android:fontFamily="@font/sf_pro_display_light_italic"
-                android:minWidth="@dimen/min_width_button_search_country_selected"
-                android:minHeight="@dimen/min_height_button_search_country_selected"
-                android:paddingHorizontal="@dimen/padding_horizontal_button_search_country_selected"
-                android:text="@string/one_count_passenger"
-                android:paddingVertical="@dimen/padding_vertical_button_search_country_selected"
                 style="@style/some_id_2"
-                app:iconTint="@color/white"
-                app:icon="@drawable/person"
-                app:iconSize="@dimen/icon_size_one_count_passenger" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_end_material_button_search_country_selected"
+                android:backgroundTint="@color/grey_3"
+                android:fontFamily="@font/sf_pro_display_light_italic"
+                android:minWidth="@dimen/min_width_button_search_country_selected"
+                android:minHeight="@dimen/min_height_button_search_country_selected"
+                android:paddingHorizontal="@dimen/padding_horizontal_button_search_country_selected"
+                android:paddingVertical="@dimen/padding_vertical_button_search_country_selected" />
+
 
             <com.google.android.material.button.MaterialButton
+                style="@style/some_id_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_end_material_button_search_country_selected"
+                android:backgroundTint="@color/grey_3"
+                android:fontFamily="@font/sf_pro_display_light_italic"
+                android:minWidth="@dimen/min_width_button_search_country_selected"
+                android:minHeight="@dimen/min_height_button_search_country_selected"
+                android:paddingHorizontal="@dimen/padding_horizontal_button_search_country_selected"
+                android:paddingVertical="@dimen/padding_vertical_button_search_country_selected"
+                android:text="@string/one_count_passenger"
+                app:icon="@drawable/person"
+                app:iconSize="@dimen/icon_size_one_count_passenger"
+                app:iconTint="@color/white" />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/some_id_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/margin_end_material_button_search_country_selected"
@@ -165,22 +160,19 @@
                 android:paddingHorizontal="@dimen/padding_horizontal_button_search_country_selected"
                 android:paddingVertical="@dimen/padding_vertical_button_search_country_selected"
                 android:text="@string/filters"
-                style="@style/some_id_2"
-                app:iconTint="@color/white"
                 app:icon="@drawable/filters"
-                app:iconSize="@dimen/icon_size_filters" />
+                app:iconSize="@dimen/icon_size_filters"
+                app:iconTint="@color/white" />
         </LinearLayout>
     </HorizontalScrollView>
 
     <androidx.cardview.widget.CardView
         android:layout_width="@dimen/width_card_view_recycler_for_all_straight_rails"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/margin_top_card_view_recycler_for_all_straight_rails"
         android:backgroundTint="@color/grey_0"
-        app:cardCornerRadius="@dimen/corner_radius_card_view_recycler_for_all_straight_rails"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:cardCornerRadius="@dimen/corner_radius_card_view_recycler_for_all_straight_rails">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -213,14 +205,12 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_show_all_ticket"
         style="@style/some_id_6"
-        android:layout_width="@dimen/width_button_show_all_ticket"
+        android:layout_width="@dimen/width_card_departure_points_search_country_selected"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_top_button_show_all_ticket"
         android:backgroundTint="@color/dark_blue"
         android:text="@string/show_all_ticket"
         app:cornerRadius="@dimen/corner_radius_button_show_all_ticket"
-        app:layout_constraintEnd_toEndOf="@id/card_departure_points"
-        app:layout_constraintStart_toStartOf="@id/card_departure_points"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_gravity="center_horizontal"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

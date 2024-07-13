@@ -4,229 +4,214 @@
     android:layout_width="match_parent"
     android:layout_height="744dp">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/strip_custom_search_dialog"
-            android:contentDescription="@string/description_button_hide"
-            android:src="@drawable/bottom"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/strip_custom_search_dialog"
+        android:contentDescription="@string/description_button_hide"
+        android:src="@drawable/bottom" />
 
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="@dimen/width_card_view_custom_search_dialog"
-            android:layout_height="@dimen/height_card_view_custom_search_dialog"
-            android:layout_marginTop="@dimen/margin_top_card_view_custom_search_dialog"
-            android:backgroundTint="@color/grey_3"
-            app:cardCornerRadius="@dimen/corner_radius_card_view_custom_search_dialog"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/width_card_view_custom_search_dialog"
+        android:layout_height="@dimen/height_card_view_custom_search_dialog"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_top_card_view_custom_search_dialog"
+        android:backgroundTint="@color/grey_3"
+        app:cardCornerRadius="@dimen/corner_radius_card_view_custom_search_dialog">
 
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="@dimen/padding_container_edit_card_view_custom_search_dialog">
-
-
-                <ImageView
-                    android:id="@+id/icon_air"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/margin_start_icon_air_custom_search_dialog"
-                    android:src="@drawable/air"
-                    app:layout_constraintBottom_toTopOf="@id/image_divider"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:contentDescription="@string/description_icon_air" />
-
-                <com.google.android.material.divider.MaterialDivider
-                    android:id="@+id/image_divider"
-                    android:layout_width="@dimen/width_divider_card_view_custom_search_dialog"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/margin_divider_card_view_custom_search_dialog"
-                    android:layout_marginEnd="@dimen/margin_divider_card_view_custom_search_dialog"
-                    app:dividerColor="@color/grey_4"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:id="@+id/icon_search"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/margin_icon_search_card_view_custom_search_dialog"
-                    android:src="@drawable/search"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/image_divider"
-                    android:contentDescription="@string/description_icon_search" />
-
-                <TextView
-                    android:id="@+id/edit_where_from"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/margin_edit_where_from_card_view_custom_search_dialog"
-                    android:text="@string/moscow"
-                    android:textAppearance="@style/edit_text_where_from"
-                    android:textColor="@color/white"
-                    app:layout_constraintStart_toEndOf="@id/icon_air"
-                    app:layout_constraintTop_toTopOf="@id/icon_air" />
-
-                <TextView
-                    android:id="@+id/edit_where"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/margin_edit_where_from_card_view_custom_search_dialog"
-                    android:text="@string/where_turkey"
-                    android:textAppearance="@style/edit_text_where"
-                    app:layout_constraintStart_toEndOf="@id/icon_search"
-                    app:layout_constraintTop_toTopOf="@id/icon_search" />
-
-                <ImageView
-                    android:id="@+id/icon_clear"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/clear"
-                    app:layout_constraintEnd_toEndOf="@id/image_divider"
-                    app:layout_constraintTop_toTopOf="@id/icon_search"
-                    android:contentDescription="@string/description_icon_clear" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-        </androidx.cardview.widget.CardView>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="@dimen/width_container_for_icons_custom_search_dialog"
-            android:layout_height="@dimen/height_container_for_icons_custom_search_dialog"
-            android:layout_marginTop="@dimen/margin_top_container_for_icons_custom_search_dialog"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/padding_container_edit_card_view_custom_search_dialog">
 
 
             <ImageView
-                android:id="@+id/icon_difficult_route"
+                android:id="@+id/icon_air"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/difficult_route"
-                app:layout_constraintEnd_toEndOf="@id/text_difficult_route"
-                app:layout_constraintStart_toStartOf="@id/text_difficult_route"
-                app:layout_constraintTop_toTopOf="parent"
-                android:contentDescription="@string/description_icon_difficult_route" />
-
-
-            <TextView
-                android:id="@+id/text_difficult_route"
-                android:layout_width="@dimen/width_text_difficult_route_custom_search_dialog"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/difficult_route"
-                android:textAppearance="@style/some_id_2"
+                android:layout_marginStart="@dimen/margin_start_icon_air_custom_search_dialog"
+                android:contentDescription="@string/description_icon_air"
+                android:src="@drawable/air"
+                app:layout_constraintBottom_toTopOf="@id/image_divider"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/icon_difficult_route" />
+                app:layout_constraintTop_toTopOf="parent" />
 
-
-            <ImageView
-                android:id="@+id/icon_anywhere"
-                android:layout_width="wrap_content"
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/image_divider"
+                android:layout_width="@dimen/width_divider_card_view_custom_search_dialog"
                 android:layout_height="wrap_content"
-                android:src="@drawable/anywhere"
-                app:layout_constraintEnd_toEndOf="@id/text_anywhere"
-                app:layout_constraintStart_toStartOf="@id/text_anywhere"
-                app:layout_constraintTop_toTopOf="parent"
-                android:contentDescription="@string/description_icon_anywhere" />
-
-
-            <TextView
-                android:id="@+id/text_anywhere"
-                android:layout_width="@dimen/width_text_anywhere_custom_search_dialog"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/anywhere"
-                android:textAppearance="@style/some_id_2"
-                app:layout_constraintEnd_toStartOf="@id/text_weekends"
-                app:layout_constraintStart_toEndOf="@id/text_difficult_route"
-                app:layout_constraintTop_toBottomOf="@id/icon_anywhere" />
-
-            <ImageView
-                android:id="@+id/icon_weekends"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/weekends"
-                app:layout_constraintEnd_toEndOf="@id/text_weekends"
-                app:layout_constraintStart_toStartOf="@id/text_weekends"
-                app:layout_constraintTop_toTopOf="parent"
-                android:contentDescription="@string/description_icon_weekends" />
-
-
-            <TextView
-                android:id="@+id/text_weekends"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/weekends"
-                android:textAppearance="@style/some_id_2"
-                app:layout_constraintEnd_toStartOf="@id/text_hot_tickets"
-                app:layout_constraintStart_toEndOf="@id/text_anywhere"
-                app:layout_constraintTop_toBottomOf="@id/icon_weekends" />
-
-
-            <ImageView
-                android:id="@+id/icon_hot_tickets"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/hot_tickets"
-                app:layout_constraintEnd_toEndOf="@id/text_hot_tickets"
-                app:layout_constraintStart_toStartOf="@id/text_hot_tickets"
-                app:layout_constraintTop_toTopOf="parent"
-                android:contentDescription="@string/description_icon_hot_tickets" />
-
-
-            <TextView
-                android:id="@+id/text_hot_tickets"
-                android:layout_width="@dimen/width_text_hot_tickets_custom_search_dialog"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/hot_tickets"
-                android:textAppearance="@style/some_id_2"
+                android:layout_marginStart="@dimen/margin_divider_card_view_custom_search_dialog"
+                android:layout_marginEnd="@dimen/margin_divider_card_view_custom_search_dialog"
+                app:dividerColor="@color/grey_4"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/icon_hot_tickets" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
+            <ImageView
+                android:id="@+id/icon_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_icon_search_card_view_custom_search_dialog"
+                android:contentDescription="@string/description_icon_search"
+                android:src="@drawable/search"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/image_divider" />
+
+            <TextView
+                android:id="@+id/edit_where_from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_edit_where_from_card_view_custom_search_dialog"
+                android:text="@string/moscow"
+                android:textAppearance="@style/edit_text_where_from"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toEndOf="@id/icon_air"
+                app:layout_constraintTop_toTopOf="@id/icon_air" />
+
+            <TextView
+                android:id="@+id/edit_where"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_edit_where_from_card_view_custom_search_dialog"
+                android:text="@string/where_turkey"
+                android:textAppearance="@style/edit_text_where"
+                app:layout_constraintStart_toEndOf="@id/icon_search"
+                app:layout_constraintTop_toTopOf="@id/icon_search" />
+
+            <ImageView
+                android:id="@+id/icon_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/description_icon_clear"
+                android:src="@drawable/clear"
+                app:layout_constraintEnd_toEndOf="@id/image_divider"
+                app:layout_constraintTop_toTopOf="@id/icon_search" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+    </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="@dimen/width_container_recycler_for_list_popular_destination"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="@dimen/width_container_for_icons_custom_search_dialog"
+        android:layout_height="@dimen/height_container_for_icons_custom_search_dialog"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_top_container_for_icons_custom_search_dialog"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:id="@+id/icon_difficult_route"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_top_container_recycler_for_list_popular_destination"
-            android:layout_marginBottom="@dimen/margin_bottom_container_recycler_for_list_popular_destination"
-            android:backgroundTint="@color/grey_3"
-            app:cardCornerRadius="@dimen/corner_radius_container_recycler_for_list_popular_destination"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:contentDescription="@string/description_icon_difficult_route"
+            android:src="@drawable/difficult_route"
+            app:layout_constraintEnd_toEndOf="@id/text_difficult_route"
+            app:layout_constraintStart_toStartOf="@id/text_difficult_route"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/text_difficult_route"
+            android:layout_width="@dimen/width_text_difficult_route_custom_search_dialog"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/difficult_route"
+            android:textAppearance="@style/some_id_2"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toBottomOf="@id/icon_difficult_route" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler_for_list_popular_destination"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="@dimen/margin_vertical_recycler_for_list_popular_destination"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
-        </androidx.cardview.widget.CardView>
+        <ImageView
+            android:id="@+id/icon_anywhere"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/description_icon_anywhere"
+            android:src="@drawable/anywhere"
+            app:layout_constraintEnd_toEndOf="@id/text_anywhere"
+            app:layout_constraintStart_toStartOf="@id/text_anywhere"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/text_anywhere"
+            android:layout_width="@dimen/width_text_anywhere_custom_search_dialog"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/anywhere"
+            android:textAppearance="@style/some_id_2"
+            app:layout_constraintEnd_toStartOf="@id/text_weekends"
+            app:layout_constraintStart_toEndOf="@id/text_difficult_route"
+            app:layout_constraintTop_toBottomOf="@id/icon_anywhere" />
+
+        <ImageView
+            android:id="@+id/icon_weekends"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/description_icon_weekends"
+            android:src="@drawable/weekends"
+            app:layout_constraintEnd_toEndOf="@id/text_weekends"
+            app:layout_constraintStart_toStartOf="@id/text_weekends"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/text_weekends"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/weekends"
+            android:textAppearance="@style/some_id_2"
+            app:layout_constraintEnd_toStartOf="@id/text_hot_tickets"
+            app:layout_constraintStart_toEndOf="@id/text_anywhere"
+            app:layout_constraintTop_toBottomOf="@id/icon_weekends" />
+
+
+        <ImageView
+            android:id="@+id/icon_hot_tickets"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/description_icon_hot_tickets"
+            android:src="@drawable/hot_tickets"
+            app:layout_constraintEnd_toEndOf="@id/text_hot_tickets"
+            app:layout_constraintStart_toStartOf="@id/text_hot_tickets"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/text_hot_tickets"
+            android:layout_width="@dimen/width_text_hot_tickets_custom_search_dialog"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/hot_tickets"
+            android:textAppearance="@style/some_id_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/icon_hot_tickets" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/width_container_recycler_for_list_popular_destination"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_top_container_recycler_for_list_popular_destination"
+        android:backgroundTint="@color/grey_3"
+        app:cardCornerRadius="@dimen/corner_radius_container_recycler_for_list_popular_destination">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_for_list_popular_destination"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/margin_vertical_recycler_for_list_popular_destination"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    </androidx.cardview.widget.CardView>
 
 </FrameLayout>

@@ -27,6 +27,7 @@
     <dimen name="padding_edit_where_air_tickets">0dp</dimen>
     <dimen name="margin_top_fly_away_musically">305dp</dimen>
     <dimen name="margin_top_fly_away_recycler_musically">350dp</dimen>
+    <dimen name="margin_start_fly_away_recycler_musically">16dp</dimen>
     <dimen name="strip_custom_search_dialog">16dp</dimen>
     <dimen name="width_card_view_custom_search_dialog">328dp</dimen>
     <dimen name="height_card_view_custom_search_dialog">96dp</dimen>
@@ -46,7 +47,6 @@
     <dimen name="width_text_hot_tickets_custom_search_dialog">65dp</dimen>
     <dimen name="width_container_recycler_for_list_popular_destination">328dp</dimen>
     <dimen name="margin_top_container_recycler_for_list_popular_destination">285dp</dimen>
-    <dimen name="margin_bottom_container_recycler_for_list_popular_destination">243dp</dimen>
     <dimen name="corner_radius_container_recycler_for_list_popular_destination">16dp</dimen>
     <dimen name="margin_vertical_recycler_for_list_popular_destination">12dp</dimen>
     <dimen name="width_card_departure_points_search_country_selected">328dp</dimen>
@@ -78,8 +78,7 @@
     <dimen name="margin_start_title_way_show_all_tickets">32dp</dimen>
     <dimen name="margin_start_count_passenger_show_all_tickets">5dp</dimen>
     <dimen name="width_scroll_for_list_tickets_show_all_tickets">328dp</dimen>
-    <dimen name="height_scroll_for_list_tickets_show_all_tickets">0dp</dimen>
-    <dimen name="margin_top_scroll_for_list_tickets_show_all_tickets">34dp</dimen>
+    <dimen name="margin_top_scroll_for_list_tickets_show_all_tickets">138dp</dimen>
     <dimen name="width_button_filter_show_all_tickets">102dp</dimen>
     <dimen name="height_button_filter_show_all_tickets">37dp</dimen>
     <dimen name="padding_button_filter_show_all_tickets">6dp</dimen>
@@ -106,7 +105,6 @@
     <dimen name="width_icon_circle_item_straight">24dp</dimen>
     <dimen name="height_icon_circle_item_straight">24dp</dimen>
     <dimen name="margin_top_icon_circle_item_straight">8dp</dimen>
-    <dimen name="width_container_information_item_straight">0dp</dimen>
     <dimen name="margin_start_container_information_item_straight">32dp</dimen>
     <dimen name="margin_top_container_information_item_straight">8dp</dimen>
     <dimen name="margin_end_price_value_item_straight">5dp</dimen>
