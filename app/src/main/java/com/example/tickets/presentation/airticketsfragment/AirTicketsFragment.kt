@@ -5,9 +5,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.core.widget.doAfterTextChanged
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import com.example.tickets.data.R
 import com.example.tickets.presentation.adapters.MusicallyAdapter
 import com.example.tickets.presentation.models.StateLoad
 import com.example.tickets.databinding.FragmentAirTicketsBinding
@@ -45,18 +48,38 @@ class AirTicketsFragment : Fragment() {
         getOfferToFly()
         getState()
         clickEditWhere()
+        saveEditWhereFrom()
     }
 
     private fun clickEditWhere() {
         binding.editWhere.setOnClickListener {
-            val modalBottomSheet = CustomSearchDialogFragment()
-            val bundle = Bundle()
-            bundle.putString(
-                CustomSearchDialogFragment.ARG_PARAM_TASK,
-                binding.editWhereFrom.text.toString()
-            )
-            modalBottomSheet.arguments = bundle
-            modalBottomSheet.show(childFragmentManager, CustomSearchDialogFragment.TAG)
+            if (checkIsNotEmptyEditWhereFrom()) {
+                val modalBottomSheet = CustomSearchDialogFragment()
+                val bundle = Bundle()
+                bundle.putString(
+                    CustomSearchDialogFragment.ARG_PARAM_TASK,
+                    binding.editWhereFrom.text.toString()
+                )
+                modalBottomSheet.arguments = bundle
+                modalBottomSheet.show(childFragmentManager, CustomSearchDialogFragment.TAG)
+            }
+        }
+    }
+
+    private fun checkIsNotEmptyEditWhereFrom(): Boolean {
+        if (binding.editWhereFrom.text?.isNotEmpty() == true)
+            return true
+        Toast.makeText(
+            requireContext(),
+            getString(R.string.editWhereFrom),
+            Toast.LENGTH_SHORT
+        ).show()
+        return false
+    }
+
+    private fun saveEditWhereFrom() {
+        binding.editWhereFrom.doAfterTextChanged {
+            viewModel.saveCityName(it.toString())
         }
     }
 
@@ -93,7 +116,6 @@ class AirTicketsFragment : Fragment() {
 
     override fun onDestroy() {
         super.onDestroy()
-        viewModel.saveCityName(binding.editWhereFrom.text.toString())
         _binding = null
     }
 }

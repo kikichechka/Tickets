@@ -5,4 +5,5 @@
     <string name="sochi">Сочи</string>
     <string name="phuket">Пхукет</string>
     <string name="moscow">Москва</string>
+    <string name="editWhereFrom">Введите место отправления</string>
 </resources>
