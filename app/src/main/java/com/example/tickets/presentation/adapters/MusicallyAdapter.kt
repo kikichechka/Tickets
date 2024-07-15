@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.bumptech.glide.Glide
-import com.example.tickets.domain.models.OfferWithPicture
+import com.example.tickets.presentation.models.OfferWithPicture
 import com.example.tickets.R
 import com.example.tickets.databinding.ItemMusicallyBinding
 

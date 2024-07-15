@@ -3,8 +3,9 @@ package com.example.tickets.presentation.searchcountryselectedfragment
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.tickets.domain.GetRecommendationsPlacesArrivalUseCase
-import com.example.tickets.domain.models.TicketOfferWithPicture
+import com.example.tickets.presentation.models.TicketOfferWithPicture
 import com.example.tickets.presentation.models.StateLoad
+import com.example.tickets.presentation.models.toTicketOfferWithPicture
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
@@ -27,7 +28,7 @@ class SearchCountrySelectedViewModel @Inject constructor(
     private fun getData() {
         viewModelScope.launch {
             val answer = getRecommendationsPlacesArrivalUseCase.getData()?.let {
-                _listRecommendationsPlacesArrival.value = it
+                _listRecommendationsPlacesArrival.value = it.toTicketOfferWithPicture()
                 _state.value = StateLoad.SUCCESS
             }
             if (answer == null) {

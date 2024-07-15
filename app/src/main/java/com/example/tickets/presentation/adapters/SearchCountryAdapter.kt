@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.bumptech.glide.Glide
 import com.example.tickets.R
 import com.example.tickets.databinding.ItemStraightRailBinding
-import com.example.tickets.domain.models.TicketOfferWithPicture
+import com.example.tickets.presentation.models.TicketOfferWithPicture
 
 class SearchCountryAdapter(private val context: Context) :
     RecyclerView.Adapter<SearchCountryAdapter.SearchCountryHolder>() {

@@ -5,8 +5,9 @@ import androidx.lifecycle.viewModelScope
 import com.example.tickets.domain.GetCityUseCase
 import com.example.tickets.domain.GetOffersToFlyUseCase
 import com.example.tickets.domain.SaveCityUseCase
-import com.example.tickets.domain.models.OfferWithPicture
+import com.example.tickets.presentation.models.OfferWithPicture
 import com.example.tickets.presentation.models.StateLoad
+import com.example.tickets.presentation.models.toOfferWithPicture
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
@@ -35,7 +36,7 @@ class AirTicketsViewModel @Inject constructor(
 
     private suspend fun getData() {
         val answer = getOffersToFlyUseCase.getData()?.let {
-            _offersToFly.value = it
+            _offersToFly.value = it.toOfferWithPicture()
             _state.value = StateLoad.SUCCESS
         }
         if (answer == null) {
