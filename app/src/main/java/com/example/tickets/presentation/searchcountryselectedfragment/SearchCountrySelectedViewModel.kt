@@ -35,6 +35,5 @@ class SearchCountrySelectedViewModel @Inject constructor(
                 _state.value = StateLoad.ERROR
             }
         }
-
     }
 }

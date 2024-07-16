@@ -9,11 +9,6 @@ class GetOffersToFlyUseCase @Inject constructor(
 ) {
 
     suspend fun getData(): Offers? {
-        val response = ticketsRepository.getOffers()
-
-        if (response.code() in 200..299) {
-            return response.body()
-        }
-        return null
+        return ticketsRepository.getOffers()
     }
 }

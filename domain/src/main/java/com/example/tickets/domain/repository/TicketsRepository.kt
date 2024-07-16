@@ -6,9 +6,9 @@ import com.example.tickets.domain.models.TicketsOffers
 import retrofit2.Response
 
 interface TicketsRepository {
-    suspend fun getOffers(): Response<Offers>
+    suspend fun getOffers(): Offers?
 
-    suspend fun getRecommendTickets(): Response<TicketsOffers>
+    suspend fun getRecommendTickets(): TicketsOffers?
 
-    suspend fun getAllTickets(): Response<Tickets>
+    suspend fun getAllTickets(): Tickets?
 }

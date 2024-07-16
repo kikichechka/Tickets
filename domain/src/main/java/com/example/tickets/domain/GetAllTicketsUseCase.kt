@@ -9,10 +9,6 @@ class GetAllTicketsUseCase @Inject constructor(
 ) {
 
     suspend fun getData(): List<TicketDescription>? {
-        val response = ticketsRepository.getAllTickets()
-        if (response.code() in 200..299) {
-            return response.body()?.tickets
-        }
-        return null
+        return ticketsRepository.getAllTickets()?.tickets
     }
 }

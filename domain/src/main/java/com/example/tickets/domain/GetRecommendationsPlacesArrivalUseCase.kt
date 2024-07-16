@@ -9,10 +9,6 @@ class GetRecommendationsPlacesArrivalUseCase @Inject constructor(
 ) {
 
     suspend fun getData(): TicketsOffers? {
-        val response = ticketsRepository.getRecommendTickets()
-        if (response.code() in 200..299) {
-            return response.body()
-        }
-        return null
+        return ticketsRepository.getRecommendTickets()
     }
 }
